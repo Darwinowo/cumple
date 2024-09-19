@@ -3,20 +3,15 @@
     padding: 0;
     margin: 0;
     font-family: 'Bodoni Moda', serif;
-    box-sizing: border-box;
 }
 
 body {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(bday.gif);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('cha-eunwoo-bday-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
-    text-align: center;
 }
 
 .container {
@@ -24,16 +19,24 @@ body {
 }
 
 .card {
-    width: 300px;
-    height: 400px;
-    position: relative;
+    width: 280px;
+    height: 360px;
+    position: absolute;
+    top: 100px;
+    left: 230px;
     transition: 2s;
     transform-style: preserve-3d;
-    margin-bottom: 2rem;
 }
 
 .card:hover {
     transform: rotateY(180deg);
+}
+
+.block {
+    position: absolute;
+    top: 200px;
+    right: 600px;
+    perspective: 800px;
 }
 
 .outside, .inside {
@@ -42,96 +45,88 @@ body {
     border-radius: 20px;
     text-align: center;
     padding: 1.5rem;
-    position: absolute;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .outside {
     background-color: #ffe6f0;
-    background-image: url('cha-eunwoo.jpg'); /* Imagen de Cha Eunwoo de fondo */
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+    position: absolute;
+    backface-visibility: hidden;
+    background-image: url('cha-eunwoo-bg.jpg'); /* Fondo personalizado de Cha Eunwoo */
     background-size: cover;
-    background-blend-mode: multiply;
+    background-position: center;
 }
 
 .outside h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
+    font-weight: bold;
     color: #ff6b81;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 .outside h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0.4);
     padding: 10px;
     border-radius: 10px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 }
 
 .inside {
     background-color: #ffdfba;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
     transform: rotateY(180deg);
 }
 
 .inside img {
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }
 
 .inside h3 {
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 1.2rem;
     font-weight: bold;
-}
-
-.block {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
+    margin-top: 20px;
+    color: #333;
 }
 
 .frames {
-    width: 250px;
+    width: 400px;
     height: 150px;
-    background-color: #ffc1cc;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    margin: 0 10px;
-    transition: 0.5s;
-    position: relative;
-}
-
-.frames:hover {
-    transform: scale(1.1);
+    justify-content: space-around;
+    padding: 0 0.8rem;
+    transform: rotateY(-230deg) rotateX(20deg);
+    position: absolute;
+    border-radius: 15px;
+    background-image: url('cha-eunwoo-pattern.jpg'); /* Fondo suave con patrón de Cha Eunwoo */
 }
 
 .frames img {
-    width: 80px;
-    height: 80px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
-    margin-right: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }
 
 .frames p {
-    font-size: 1.2rem;
-    color: #fff;
+    font-size: 20px;
     font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    transform: rotateY(180deg);
 }
 
 .frames:nth-child(1) {
+    top: -110px;
+    z-index: -1;
     background-color: #ff8a80;
 }
 
@@ -140,5 +135,6 @@ body {
 }
 
 .frames:nth-child(3) {
+    top: 100px;
     background-color: #80d8ff;
 }
