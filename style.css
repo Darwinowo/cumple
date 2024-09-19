@@ -1,100 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Bodoni Moda', serif;
+    box-sizing: border-box;
 }
-body{
+
+body {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bday.gif);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(bday.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
-.container{
+
+.container {
     perspective: 1000px;
 }
-.card{
-    width: 280px;
-    height: 360px;
-    position: absolute;
-    top: 100px;
-    left: 230px;
+
+.card {
+    width: 300px;
+    height: 400px;
+    position: relative;
     transition: 2s;
     transform-style: preserve-3d;
+    margin-bottom: 2rem;
 }
-.card:hover{
+
+.card:hover {
     transform: rotateY(180deg);
 }
-.block{
-    position: absolute;
-    top:200px;
-    right: 600px;
-    perspective: 800px;
-}
-.outside,.inside{
+
+.outside, .inside {
     width: 100%;
     height: 100%;
     border-radius: 20px;
     text-align: center;
     padding: 1.5rem;
-}
-.outside{
-    background-color: blanchedalmond;
-    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
     position: absolute;
     backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
-.outside h1{
-    font-size: 3rem;
-    font-weight: bold;
-    color: salmon;
-    margin-bottom: 30px;
+
+.outside {
+    background-color: #ffe6f0;
+    background-image: url('cha-eunwoo.jpg'); /* Imagen de Cha Eunwoo de fondo */
+    background-size: cover;
+    background-blend-mode: multiply;
 }
-.inside{
-    background-color: rgb(255, 244, 79);
-    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+
+.outside h1 {
+    font-size: 2.8rem;
+    color: #ff6b81;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.outside h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inside {
+    background-color: #ffdfba;
     transform: rotateY(180deg);
 }
-.inside h3{
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 20px;
+
+.inside img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
 }
-.frames{
-    width: 400px;
+
+.inside h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.block {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.frames {
+    width: 250px;
     height: 150px;
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+    background-color: #ffc1cc;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 0 0.8rem;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 0 10px;
+    transition: 0.5s;
+    position: relative;
+}
 
-    transform: rotateY(-230deg) rotateX(20deg);
-    position: absolute;
+.frames:hover {
+    transform: scale(1.1);
 }
-.frames img{
-    width: 125px;
-    height: 125px;
+
+.frames img {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    margin-right: 15px;
 }
-.frames p{
-   font-size: 20px;
-   font-weight: bold;
-   transform: rotateY(180deg);
+
+.frames p {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
-.frames:nth-child(1)
-{
-    top:-110px;
-    z-index: -1;
-    background-color: coral;
+
+.frames:nth-child(1) {
+    background-color: #ff8a80;
 }
-.frames:nth-child(2){
-    background-color: goldenrod;
+
+.frames:nth-child(2) {
+    background-color: #ffd180;
 }
-.frames:nth-child(3)
-{
-    top:100px;
-    background-color: burlywood;
+
+.frames:nth-child(3) {
+    background-color: #80d8ff;
 }
