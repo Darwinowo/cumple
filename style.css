@@ -8,11 +8,10 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cha-eunwoo-bday-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://example.com/cha-eunwoo-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff; /* Texto blanco para mejor contraste */
 }
 
 .container {
@@ -37,7 +36,6 @@ body {
 .block {
     position: absolute;
     top: 200px;
-    right: 0;
     left: 50%;
     transform: translateX(50%);
     perspective: 800px;
@@ -62,7 +60,6 @@ body {
     font-size: 3rem;
     font-weight: bold;
     color: #ff6b81; /* Color rosa Cha Eunwoo */
-    margin-bottom: 30px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -107,7 +104,7 @@ body {
     transform: rotateY(-230deg) rotateX(20deg);
     position: absolute;
     border-radius: 15px;
-    background-image: url('cha-eunwoo-pattern.jpg'); /* Fondo con patrón de Cha Eunwoo */
+    background-image: url('https://example.com/cha-eunwoo-pattern.jpg'); /* Fondo con patrón de Cha Eunwoo */
 }
 
 .frames img {
